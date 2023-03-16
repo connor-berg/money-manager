@@ -1,23 +1,13 @@
-const { Stack, Duration } = require('aws-cdk-lib');
-// const sqs = require('aws-cdk-lib/aws-sqs');
+import { Construct } from 'constructs'
+import { Stack } from 'aws-cdk-lib'
 
-class TempStack extends Stack {
+export class MoneyManagerStack extends Stack {
   /**
-   *
-   * @param {Construct} scope
-   * @param {string} id
-   * @param {StackProps=} props
+   * The constructor for building the stack.
+   * @param {Construct} scope The Construct scope to create the stack in.
+   * @param {string} id The ID of the stack to use.
    */
-  constructor(scope, id, props) {
-    super(scope, id, props);
-
-    // The code that defines your stack goes here
-
-    // example resource
-    // const queue = new sqs.Queue(this, 'TempQueue', {
-    //   visibilityTimeout: Duration.seconds(300)
-    // });
-  }
+    constructor(scope: Construct, id: string) {
+      super(scope, id)
+    }
 }
-
-module.exports = { TempStack }
